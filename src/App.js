@@ -1,33 +1,16 @@
 import React from "react";
-import PassData1 from "./components/PassData1";
+import PassData2 from "./components/PassData2";
 
 const App = () => {
-    let height = 5.6;
-    return (
-      <>
-        <p>App Component</p>
-        <PassData1
-          name="Gaurav"
-          height={height}
-          age={20}
-          arr={[5, 40, 60, 7, 80]}
-          greet={(name) => {
-            console.log(`Good Morning, Everyone... from ${name}`);
-          }}
-          language={function (name) {
-            return `Good Morning, ${name}-Sir`;
-          }}
-          obj={{
-            name: "Gaurav",
-            age: 30,
-            gender: "Male",
-          }}
-          und={undefined}
-          null={null}
-          na={NaN}
-        />
-      </>
-    );
-  };
-  
-  export default App;
+  return (
+    <>
+      <p>App Component</p>
+      <PassData2 name="Gaurav" age={10}>
+        <h1>I'm 1st Child</h1>
+        <p>I'm 2nd Child after h1</p>
+      </PassData2>
+    </>
+  );
+};
+
+export default App;
