@@ -5,7 +5,7 @@ const App = () => {
   return (
     <>
       <p>App Component</p>
-      <PassData2 sex='Male' age={'50'}>
+      <PassData2 sex='Male'>
         <h1>I'm 1st Child</h1>
         <p>I'm 2nd Child after h1</p>
       </PassData2>

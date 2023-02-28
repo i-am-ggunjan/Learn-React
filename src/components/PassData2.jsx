@@ -11,7 +11,6 @@ const PassData2 = (props) => {
       {props.name}
       <br />
       {props.age}
-      {/* Here we will get warning, because we passed data as string but the required data should be number type */}
       <br />
       {props.sex}
       <br />
@@ -21,15 +20,17 @@ const PassData2 = (props) => {
 };
 
 PassData2.defaultProps = {
-  name: "No name passed",
+//   name: "No name passed",
   age: 10,
   sex: "No sex passed",
 };
 
 PassData2.propTypes = {
-    name: Types.string,
-    age: Types.number,
-    sex : Types.string
+    age: Types.number.isRequired,
+    // Here we don't get warning even we not pass data, because we get it from defaultProps
+    sex : Types.string,
+    name: Types.string.isRequired,
+    // Here we get warning even because we not pass data as well as we don.t get it from defaultProps
   };
 
 export default PassData2;
