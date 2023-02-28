@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+//! ================React================== !//
+// let ele = React.createElement("p", { className: "main" }, "Demo");
+
+// let ele2 = React.createElement("P", { className: "main" }, "Demo");
+//? It will not give error as this time we are using react dom. It will treat 'P' as a 'p' tag not as component.
+
+// ReactDOM.createRoot(document.getElementById("root")).render(ele);
+
+//! ==================JSX================== !//
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <p className="main">Demo</p>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// ReactDOM.createRoot(document.getElementById("root")).render(<P className='main'>Demo</P>);
+// ? It will give an error --> 'P' is not defined /// In JSX, tag should be in lower case. If capital then it will treat as component.
