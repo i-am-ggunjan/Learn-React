@@ -12,11 +12,13 @@ const PassData2 = (props) => {
       {props.age}
       <br />
       {props.children}
-      {/* {props.children[2]}
-      {props.children[1]}
-      {props.children[0]} */}
     </>
   );
+};
+
+PassData2.defaultProps = {
+  name: "No name passed",
+  age: "No age passed",
 };
 
 export default PassData2;
