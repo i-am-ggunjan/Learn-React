@@ -1,10 +1,10 @@
 import React from "react";
-import Hook1 from "./Hook/Hook1";
+import Hook2 from "./Hook/Hook2";
 
 const App = () => {
   return (
     <>
-      <Hook1 />
+      <Hook2 gender="Male" />
     </>
   );
 };
