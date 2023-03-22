@@ -1,10 +1,15 @@
 import React from "react";
-import Hook2 from "./Hook/Hook2";
+import C1 from "./api_components/C1";
+import C2 from "./api_components/C2";
+import { Store } from "./api/Store";
 
 const App = () => {
   return (
     <>
-      <Hook2 gender="Male" />
+      <Store>
+        <C1 />
+        <C2 />
+      </Store>
     </>
   );
 };
